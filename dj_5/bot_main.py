@@ -22,11 +22,10 @@ def start_command(message):
             bot.send_message(message.chat.id,
                              f"Вы успешно зарегистрированы! Ваш уникальный номер: {response.json()['id']}")
     else:
-        bot.send_message(message.chat.id, f"Произошла ошибка при регистрации!")
+        bot.send_message(message.chat.id, f"Произошла ошибка ри регистрации!")
         print(response.json())
         print(response.status_code)
         print(response.text)
 
-
-if __name__ == "_main_":
+if __name__ == "__main__":
     bot.polling(none_stop=True)
